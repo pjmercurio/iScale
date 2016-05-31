@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-4m-L8o">
                                         <rect key="frame" x="38" y="37" width="307" height="28"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-tS-ee0">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-tS-ee0">
                                                 <rect key="frame" x="0.0" y="0.0" width="307" height="29"/>
                                                 <segments>
                                                     <segment title="Milligrams"/>
@@ -44,6 +44,22 @@
                                             <constraint firstAttribute="height" constant="300" id="m5i-I0-cVI"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgY-it-pHQ">
+                                        <rect key="frame" x="123" y="319" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="180" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtU-bJ-hkj">
+                                        <rect key="frame" x="175" y="164" width="29" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="360" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-76-XVs">
+                                        <rect key="frame" x="228" y="323" width="32" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="xBU-tq-Srg">
                                         <rect key="frame" x="66" y="140" width="250" height="250"/>
                                     </imageView>
@@ -61,7 +77,7 @@
                                             <action selector="tare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFZ-dd-6CG"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f99-OY-e8V">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 g" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f99-OY-e8V">
                                         <rect key="frame" x="40" y="404" width="301" height="79"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="79" id="QUA-wC-1qb"/>
@@ -103,6 +119,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="fullwayLabel" destination="9U5-76-XVs" id="G1a-ev-qyC"/>
+                        <outlet property="halfwayLabel" destination="MtU-bJ-hkj" id="qAA-Od-zNw"/>
                         <outlet property="needle" destination="xBU-tq-Srg" id="QtT-3h-qhX"/>
                         <outlet property="tareButton" destination="Eso-l8-A4l" id="Ky9-2Y-r4S"/>
                         <outlet property="unitSelector" destination="Y4f-tS-ee0" id="JBS-v6-u3N"/>

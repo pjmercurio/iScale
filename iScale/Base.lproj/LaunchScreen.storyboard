@@ -28,8 +28,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iScale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdT-Fm-ilp">
-                                        <rect key="frame" x="129" y="50" width="124" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <rect key="frame" x="118" y="50" width="147.5" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-9J-WFf">
+                                        <rect key="frame" x="148" y="321" width="86.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -38,8 +44,10 @@
                                 <constraints>
                                     <constraint firstItem="wdT-Fm-ilp" firstAttribute="centerX" secondItem="TcB-78-7Df" secondAttribute="centerX" id="98Z-TF-pO4"/>
                                     <constraint firstItem="wdT-Fm-ilp" firstAttribute="top" secondItem="TcB-78-7Df" secondAttribute="top" constant="50" id="CkH-nB-I7L"/>
+                                    <constraint firstItem="5hG-9J-WFf" firstAttribute="centerX" secondItem="TcB-78-7Df" secondAttribute="centerX" id="HHt-NF-WpL"/>
                                     <constraint firstItem="BTE-Vu-BDb" firstAttribute="centerX" secondItem="TcB-78-7Df" secondAttribute="centerX" id="YyY-wB-sg3"/>
                                     <constraint firstAttribute="bottom" secondItem="BTE-Vu-BDb" secondAttribute="bottom" constant="44" id="rdc-Dx-qRB"/>
+                                    <constraint firstItem="5hG-9J-WFf" firstAttribute="centerY" secondItem="TcB-78-7Df" secondAttribute="centerY" id="zKV-5F-lVA"/>
                                 </constraints>
                             </view>
                         </subviews>
