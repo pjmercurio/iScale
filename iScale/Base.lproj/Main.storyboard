@@ -1,25 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iScale" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnj-2c-eQ7">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-4m-L8o">
+                                        <rect key="frame" x="38" y="37" width="307" height="28"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-tS-ee0">
+                                                <rect key="frame" x="0.0" y="0.0" width="307" height="29"/>
+                                                <segments>
+                                                    <segment title="Milligrams"/>
+                                                    <segment title="Grams"/>
+                                                    <segment title="Ounces"/>
+                                                    <segment title="Lbs"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="unitChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vzg-FQ-Xnd"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="odo_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="xYe-OE-Nk7">
+                                        <rect key="frame" x="41" y="115" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="m5i-I0-cVI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="xBU-tq-Srg">
+                                        <rect key="frame" x="66" y="140" width="250" height="250"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eso-l8-A4l">
+                                        <rect key="frame" x="109" y="578" width="164" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="164" id="ZlW-0j-PgI"/>
+                                            <constraint firstAttribute="height" constant="67" id="ewy-YX-qqW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Tare">
+                                            <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFZ-dd-6CG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f99-OY-e8V">
+                                        <rect key="frame" x="40" y="404" width="301" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="QUA-wC-1qb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sMx-4m-L8o" firstAttribute="centerX" secondItem="jnj-2c-eQ7" secondAttribute="centerX" id="0IN-6g-gkd"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="centerX" secondItem="jnj-2c-eQ7" secondAttribute="centerX" id="1GH-0l-9X3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eso-l8-A4l" secondAttribute="bottom" constant="22" id="4R7-ts-ov0"/>
+                                    <constraint firstItem="xBU-tq-Srg" firstAttribute="top" secondItem="sMx-4m-L8o" secondAttribute="bottom" constant="75" id="7WY-L3-GiK"/>
+                                    <constraint firstItem="f99-OY-e8V" firstAttribute="centerX" secondItem="jnj-2c-eQ7" secondAttribute="centerX" constant="-1" id="8if-KO-Sq2"/>
+                                    <constraint firstAttribute="trailing" secondItem="xYe-OE-Nk7" secondAttribute="trailing" constant="42" id="JM7-Yj-NFi"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="leading" secondItem="f99-OY-e8V" secondAttribute="leading" constant="1" id="K69-Ay-NMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="xBU-tq-Srg" secondAttribute="trailing" constant="67" id="YYi-6l-h29"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="centerY" secondItem="xBU-tq-Srg" secondAttribute="centerY" id="Ycl-sh-SDI"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="centerX" secondItem="xBU-tq-Srg" secondAttribute="centerX" id="ZlH-R3-JVZ"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="top" secondItem="sMx-4m-L8o" secondAttribute="bottom" constant="50" id="Zy6-bJ-2Bz"/>
+                                    <constraint firstItem="Eso-l8-A4l" firstAttribute="top" secondItem="f99-OY-e8V" secondAttribute="bottom" constant="95" id="dKg-b1-AKp"/>
+                                    <constraint firstItem="xBU-tq-Srg" firstAttribute="leading" secondItem="jnj-2c-eQ7" secondAttribute="leading" constant="66" id="fX7-zn-SPD"/>
+                                    <constraint firstItem="Eso-l8-A4l" firstAttribute="centerX" secondItem="jnj-2c-eQ7" secondAttribute="centerX" id="oNy-kx-Xo2"/>
+                                    <constraint firstItem="f99-OY-e8V" firstAttribute="top" secondItem="xYe-OE-Nk7" secondAttribute="bottom" constant="-11" id="qm0-v1-Z5D"/>
+                                    <constraint firstItem="xYe-OE-Nk7" firstAttribute="leading" secondItem="jnj-2c-eQ7" secondAttribute="leading" constant="41" id="svW-73-Nq2"/>
+                                    <constraint firstItem="f99-OY-e8V" firstAttribute="top" secondItem="xBU-tq-Srg" secondAttribute="bottom" constant="14" id="zcL-d2-2Ah"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jnj-2c-eQ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0bq-wm-Itc"/>
+                            <constraint firstItem="jnj-2c-eQ7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Brc-g8-HWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jnj-2c-eQ7" secondAttribute="bottom" id="Vra-8Y-1R6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jnj-2c-eQ7" secondAttribute="trailing" constant="-20" id="m7O-B6-qOe"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="needle" destination="xBU-tq-Srg" id="QtT-3h-qhX"/>
+                        <outlet property="tareButton" destination="Eso-l8-A4l" id="Ky9-2Y-r4S"/>
+                        <outlet property="unitSelector" destination="Y4f-tS-ee0" id="JBS-v6-u3N"/>
+                        <outlet property="weightLabel" destination="f99-OY-e8V" id="g2g-aM-lj8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="387.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="needle.png" width="1000" height="1000"/>
+        <image name="odo_bg.png" width="712" height="722"/>
+    </resources>
 </document>

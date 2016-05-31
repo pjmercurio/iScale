@@ -12,6 +12,8 @@
 		5723FC951CFE210200F59976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5723FC931CFE210200F59976 /* Main.storyboard */; };
 		5723FC971CFE210200F59976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5723FC961CFE210200F59976 /* Assets.xcassets */; };
 		5723FC9A1CFE210200F59976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5723FC981CFE210200F59976 /* LaunchScreen.storyboard */; };
+		5723FCA21CFE275D00F59976 /* odo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5723FCA11CFE275D00F59976 /* odo_bg.png */; };
+		5723FCA61CFE299700F59976 /* needle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5723FCA51CFE299700F59976 /* needle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5723FC961CFE210200F59976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5723FC991CFE210200F59976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5723FC9B1CFE210200F59976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5723FCA11CFE275D00F59976 /* odo_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = odo_bg.png; sourceTree = "<group>"; };
+		5723FCA51CFE299700F59976 /* needle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = needle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				5723FC961CFE210200F59976 /* Assets.xcassets */,
 				5723FC981CFE210200F59976 /* LaunchScreen.storyboard */,
 				5723FC9B1CFE210200F59976 /* Info.plist */,
+				5723FCA11CFE275D00F59976 /* odo_bg.png */,
+				5723FCA51CFE299700F59976 /* needle.png */,
 			);
 			path = iScale;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 				TargetAttributes = {
 					5723FC8B1CFE210200F59976 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZN2U85NAF7;
 					};
 				};
 			};
@@ -123,8 +130,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5723FC9A1CFE210200F59976 /* LaunchScreen.storyboard in Resources */,
+				5723FCA61CFE299700F59976 /* needle.png in Resources */,
 				5723FC971CFE210200F59976 /* Assets.xcassets in Resources */,
 				5723FC951CFE210200F59976 /* Main.storyboard in Resources */,
+				5723FCA21CFE275D00F59976 /* odo_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +258,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iScale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pjmercurio.iScale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iScale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pjmercurio.iScale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
